@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.nav__principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.nav__secondary {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+  list-style: none;
+
+  & a {
+    text-decoration: none;
+    color: var.$darkblue;
+    font-family: var.$primari-font;
+    font-size: 18px;
+  }
+
+  & img {
+    position: absolute;
+    right: -30px;
+  }
+}
+
+.login {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-right: 150px;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.leter {
+  font-family: var.$secondary-font;
+  font-size: 18px;
+  color: var.$darkblue;
+}
+
+.button {
+  @include mix.btn();
+}
